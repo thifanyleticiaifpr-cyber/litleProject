@@ -8,50 +8,36 @@
     <script type="text/javascript" src="js/bloconotas.js"></script>
 </head>
 <body>
-    <div class="container">
+ <div class="container">
+      <h1>Bloco de Notas</h1>
 
-    <h1 id="titulo">Notas</h1>
+      <label for="nota">Digite a nota:</label>
+      <input type="text" id="nota"> <br><br>
 
-    <label for="nota">Digite a nota:</label>
-    <input type="text" id="nota"> <br> <br>
+      <label><input type="radio" name="selecionado" value="urgente" checked> Urgente</label>
+      <label><input type="radio" name="selecionado" value="naourgente"> Não Urgente</label>
 
-     <div id="nota">
-
+      <br><br>
+      <button onclick="mostrarEscolha()">Mostrar escolha</button>
+      <br><br>
+    
+    <br>
+    <br>
+    <div class="containeru">
+      <h3>Urgentes</h3>
+      <ul id="elementoU"></ul>
+      <button onclick="apagarTodas('elementoU')">Remover Urgentes</button>
+    </div>
+    <br>
+    <br>
+    <div class="containern">
+      <h3>Não urgentes</h3>
+      <ul id="elementoN"></ul>
+      <button onclick="apagarTodas('elementoN')">Remover Não Urgentes</button>
     </div>
 
-    <input type="button" id="btnAdicionar" value="Adicionar" onclick="adicionar()"> <br> <br>
-    <div id="novanota"> </div>
-
-        <label><input type="radio" name="urgente" value="urgente" checked> Urgente</label>
-         <label><input type="radio" name="urgente" value="naourgente" checked> Não Urgente</label>
- <br><br>
-        
- <br><br>
-  <button onclick="mostrarEscolha()">Mostrar escolha</button>
+    <br>
     <button onclick="apagartudo()">Apagar tudo</button>
-  
-</div> 
-  <br>
-  <br>
-
-
-  <div class="containeru">
-    <ul id="elementoU">Urgentes </ul>
-    <button onclick="apagarTodasU()">Remover Urgentes</button>
-
-</div>
- 
-<br>
-<br>
-
-  <div class="containern">
-   
-    <ul id="elementoN">Não Urgentes</ul>
-     <button onclick="apagarTodasN()">Remover Não Urgentes</button>
-
-  </div>
-
-  
-   
+    </div>
 </body>
 </html>

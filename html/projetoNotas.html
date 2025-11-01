@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de notas</title>
+    <link rel="stylesheet" href="css/blocoNotas.css">
+    <script type="text/javascript" src="js/bloconotas.js"></script>
+</head>
+<body>
+    <div class="container">
+
+    <h1 id="titulo">Notas</h1>
+
+    <label for="nota">Digite a nota:</label>
+    <input type="text" id="nota"> <br> <br>
+
+     <div id="nota">
+
+    </div>
+
+    <input type="button" id="btnAdicionar" value="Adicionar" onclick="adicionar()"> <br> <br>
+    <div id="novanota"> </div>
+
+        <label><input type="radio" name="urgente" value="urgente" checked> Urgente</label>
+         <label><input type="radio" name="urgente" value="naourgente" checked> Não Urgente</label>
+ <br><br>
+        
+ <br><br>
+  <button onclick="mostrarEscolha()">Mostrar escolha</button>
+    <button onclick="apagartudo()">Apagar tudo</button>
+  
+</div> 
+  <br>
+  <br>
+
+
+  <div class="containeru">
+    <ul id="elementoU">Urgentes </ul>
+    <button onclick="apagarTodasU()">Remover Urgentes</button>
+
+</div>
+ 
+<br>
+<br>
+
+  <div class="containern">
+   
+    <ul id="elementoN">Não Urgentes</ul>
+     <button onclick="apagarTodasN()">Remover Não Urgentes</button>
+
+  </div>
+
+  
+
+
+
+
+   
+</body>
+</html>

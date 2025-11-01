@@ -22,7 +22,7 @@ function mostrarEscolha() {
   novo.classList.add(cor);
 
   var botaoRemover = document.createElement("button");
-  botaoRemover.textContent = "x";
+  botaoRemover.textContent = " ";
   botaoRemover.className = "remover";
   botaoRemover.onclick = function() {
     novo.remove();

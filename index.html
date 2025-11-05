@@ -15,25 +15,26 @@
       <input type="text" id="nota"> <br><br>
 
       <label><input type="radio" name="selecionado" value="urgente" checked>Urgente</label>
-      <label><input type="radio" name="selecionado" value="naourgente">Não Urgente</label>
+      <label><input type="radio" name="selecionado" value="naourgente"> Não Urgente</label>
 
       <br><br>
       <button onclick="mostrarEscolha()">Mostrar escolha</button>
       <br><br>
     
-    <br>
-    <br>
+    <br> <br> 
+   
+
     <div class="containeru">
       <h3>Urgentes</h3>
-      <ul id="elementoU"></ul>
-      <button onclick="apagarTodas('elementoU')">Remover Urgentes</button>
+      <div id="elementoU"></div>
+      <button onclick="apagarNotaU()">Remover Urgentes</button>
     </div>
-    <br>
-    <br>
+    <br> <br>
+    
     <div class="containern">
       <h3>Não urgentes</h3>
-      <ul id="elementoN"></ul>
-      <button onclick="apagarTodas('elementoN')">Remover Não Urgentes</button>
+      <div id="elementoN"></div>
+      <button onclick="apagarNotaN()">Remover Não Urgentes</button>
     </div>
 
     <br>

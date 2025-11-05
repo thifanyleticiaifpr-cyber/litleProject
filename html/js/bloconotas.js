@@ -14,7 +14,7 @@ function mostrarEscolha() {
     return;
   }
 
-  var novo = document.createElement("li");
+  var novo = document.createElement("p");
   novo.className = "ite";
   novo.innerText = nota;
 
@@ -27,26 +27,38 @@ function mostrarEscolha() {
       novo.style.color="purple"
     }
     colorCont=(colorCont+1)%3
-    
 
-  var botaoRemover = document.createElement("button");
-  botaoRemover.textContent = " ";
-  botaoRemover.className = "remover";
-  botaoRemover.onclick = function() {
-    novo.remove();
-  };
-
-  novo.appendChild(botaoRemover);
 
   if (selecionado.value == "urgente") {
     var div = document.getElementById("elementoU");
     div.appendChild(novo);
   } else if (selecionado.value == "naourgente") {
     var div = document.getElementById("elementoN");
-    div.appendChild(novo);
-  }
+    div.appendChild(novo); /*Colocar um pen drive*/
+  } 
 
   document.getElementById("nota").value = "";
+}
+
+function apagarNotaU() {
+
+  const div = document.getElementById("elementoU");
+  const nota= div.querySelector("p");
+  if (!nota) {
+    alert("Não há notas urgentes para apagar.");
+    return;
+  }
+  nota.remove();
+}
+
+function apagarNotaN() {
+  const div = document.getElementById("elementoN");
+  const nota= div.querySelector("p");
+  if (!nota) {
+    alert("Não há notas não  urgentes para apagar.");
+    return;
+  }
+  nota.remove();
 }
 
 function apagarTodas(idLista) {

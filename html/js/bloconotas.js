@@ -2,20 +2,20 @@ let colorCont=0
 
 function mostrarEscolha() {
   var selecionado = document.querySelector('input[name="selecionado"]:checked');
-  var nota = document.getElementById("nota").value.trim();
+  var nota = document.getElementById("nota").value.trim(); /* cria elemento de notaaa */
 
   if (nota=="") {
     alert("O campo está vaio");
     return;
-  }
+  } 
 
   if (selecionado==null) {
     alert("Selecione uma opçao");
     return;
   }
 
-  var novo = document.createElement("p");
-  novo.className = "ite";
+  var novo = document.createElement("p"); 
+  novo.className = "itemNota"; 
   novo.innerText = nota;
 
   if(colorCont==0){
@@ -34,7 +34,7 @@ function mostrarEscolha() {
     div.appendChild(novo);
   } else if (selecionado.value == "naourgente") {
     var div = document.getElementById("elementoN");
-    div.appendChild(novo); /*Colocar um pen drive*/
+    div.appendChild(novo); 
   } 
 
   document.getElementById("nota").value = "";
@@ -56,22 +56,28 @@ function apagarNotaN() {
   const nota= div.querySelector("p");
   if (!nota) {
     alert("Não há notas não  urgentes para apagar.");
-    return;
+   // return; 
+  } else{
+    nota.remove();
   }
-  nota.remove();
+  //nota.remove();
 }
-
-function apagarTodas(idLista) {
-  var lista = document.getElementById(idLista);
-  lista.innerHTML = "";
-}
-
-
 function apagartudo() {
-  apagarTodas("elementoU");
-  apagarTodas("elementoN");
-}
+ 
+  var lista = document.getElementById("elementoU");
+  var lista2 = document.getElementById("elementoN");
 
+  if(lista.innerHTML === "" && lista2.innerHTML === "") {
+    
+      alert("Não há notas para apagar.");
+    
+  } else{
+    lista.remove()
+    lista2.remove()
+  }
+  
+
+}
 /*Um campo de texto e um botão “Adicionar”.
 Um botão para marcar a nota como: não urgente ou urgente.
 Cada nota digitada deve aparecer dentro de um box. As não urgentes em amarelo limão e as  urgentes em vermelho.

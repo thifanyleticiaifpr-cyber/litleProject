@@ -1,3 +1,5 @@
+let colorCont=0
+
 function mostrarEscolha() {
   var selecionado = document.querySelector('input[name="selecionado"]:checked');
   var nota = document.getElementById("nota").value.trim();
@@ -16,10 +18,16 @@ function mostrarEscolha() {
   novo.className = "ite";
   novo.innerText = nota;
 
+  if(colorCont==0){
+    novo.style.color="blue"
 
-  var cores = ["blue", "green", "purple"];
-  var cor = cores[Math.floor(Math.random() * cores.length)];
-  novo.classList.add(cor);
+  } else if(colorCont==1){
+    novo.style.color="green"}
+    else{
+      novo.style.color="purple"
+    }
+    colorCont=(colorCont+1)%3
+    
 
   var botaoRemover = document.createElement("button");
   botaoRemover.textContent = " ";
